@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/27/62/8e/27628eb26e7e3509341a71695358d31b.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            font-family: 'Bold';
+            padding: 10px;
+            font-size: 36px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        th {
+            background-color: darkgreen;
+            color: white;
+            font-family: 'Bold';
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+        }
+        td {
+            font-family: 'Bold';
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: blanchedalmond;
+        }
+        td.route,
+        td.number,
+        td.stops {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Route</th>
+            <th>Stops</th>
+        </tr>
+        {% for bus in bus_details %}
+        <tr>
+            <td class="number">{{ bus[0] }}</td>
+            <td class="route">{{ bus[1] }}</td>
+            <td class="stops">{{ bus[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th/id/R.05a6edc9b2cfe55225ea55fa9eb435cb?rik=VM8wZxWHIf6s%2fw&riu=http%3a%2f%2fimages.newindianexpress.com%2fuploads%2fuser%2fimagelibrary%2f2018%2f10%2f28%2fw900X450%2fTamilnadu-bandh-eps5.jpeg&ehk=Sf6%2bWrUR30HRMHmIFu%2bXYx3FQTzU%2b31hXq1v6P6x8KQ%3d&risl=&pid=ImgRaw&r=0');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            border: 5px solid black;
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            height: auto;
+        }
+        h1, form {
+            text-align: center;
+        }
+        .input-container {
+            position: relative;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+        .input-container label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 0 5px;
+            font-size: 14px;
+        }
+        input[type="text"], button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: darkgreen;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://th.bing.com/th/id/OIP.m78CWk6cJADX1gSvmCexMwHaIC?pid=ImgDet&rs=1" alt="TN LOGO Icon">
+        <h1>TAMILNADU BUS DETAILS SERVICE</h1>
+        <form action="/search_results" method="POST">
+            <div class="input-container">
+                <label for="from_place">From</label>
+                <input type="text" name="from_place" id="from_place" placeholder="Enter source location">
+            </div>
+            <div class="input-container">
+                <label for="to_place">To</label>
+                <input type="text" name="to_place" id="to_place" placeholder="Enter destination location">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        <button onclick="showHelp()">Help</button>
+    </div>
+    
+    <script>
+        function showHelp() {
+            alert("Try to enter main stops near the place that you want to visit to show better results");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
